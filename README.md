@@ -14,6 +14,8 @@
   </a>
 </p>
 
+---
+
 ## 🛠 Технические компетенции
 
 ### 🔍 Анализ и проектирование
@@ -30,15 +32,10 @@
 ![Git](https://img.shields.io/badge/🌿_Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 ### ⚙️ Методологии
-<div align="center">
-
-![Agile](https://img.shields.io/badge/AGILE-0096E0?style=for-the-badge)
-![Scrum](https://img.shields.io/badge/SCRUM-6DB33F?style=for-the-badge)
-![Kanban](https://img.shields.io/badge/KANBAN-0080FF?style=for-the-badge)
-![Waterfall](https://img.shields.io/badge/WATERFALL-0052CC?style=for-the-badge)
-![XP](https://img.shields.io/badge/XP-FF6B6B?style=for-the-badge)
-
-</div>
+- **Agile** (Scrum, Kanban)
+- **Waterfall** 
+- **eXtreme Programming (XP)**
+- **RUP** (Rational Unified Process)
 
 ---
 
