@@ -32,11 +32,11 @@
 ### ⚙️ Методологии
 <div align="center">
 
-![Agile](https://img.shields.io/badge/Agile-0096E0?style=for-the-badge&logo=circle&logoColor=white)
-![Scrum](https://img.shields.io/badge/Scrum-6DB33F?style=for-the-badge&logo=scrum&logoColor=white)
-![Kanban](https://img.shields.io/badge/Kanban-0080FF?style=for-the-badge&logo=kanban&logoColor=white)
-![Waterfall](https://img.shields.io/badge/Waterfall-0052CC?style=for-the-badge&logo=water&logoColor=white)
-![XP](https://img.shields.io/badge/XP-eXtreme_Programming-FF6B6B?style=for-the-badge)
+![Agile](https://img.shields.io/badge/AGILE-0096E0?style=for-the-badge)
+![Scrum](https://img.shields.io/badge/SCRUM-6DB33F?style=for-the-badge)
+![Kanban](https://img.shields.io/badge/KANBAN-0080FF?style=for-the-badge)
+![Waterfall](https://img.shields.io/badge/WATERFALL-0052CC?style=for-the-badge)
+![XP](https://img.shields.io/badge/XP-FF6B6B?style=for-the-badge)
 
 </div>
 
