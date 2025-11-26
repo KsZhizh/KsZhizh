@@ -1,14 +1,5 @@
 <h1 align="center">Ксения | Системный аналитик</h1>
-<h3 align="center">Профессиональная переподготовка в Нетологии | Опыт управления и работы с заказчиками</h3>
 
-<p align="center">
-  <a href="mailto:ks.ig@bk.ru">
-    <img src="https://img.shields.io/badge/✉️_ks.ig@bk.ru-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <a href="https://t.me/zhksig5">
-    <img src="https://img.shields.io/badge/💬_@zhksig5-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
-  </a>
-</p>
 
 ---
 
@@ -16,6 +7,14 @@
 
 Системный аналитик с дипломом профессиональной переподготовки. Обладаю опытом в управлении комплексными поставками, работе с ключевыми клиентами, в анализе бизнес-процессов и взаимодействии с заказчиками. Готова применять аналитические навыки в IT-проектах.
 
+<p align="center">
+  <a href="mailto:ks.ig@bk.ru">
+    <img src="https://img.shields.io/badge/Email-ks.ig@bk.ru-005FF9?style=for-the-badge&logo=mail.ru&logoColor=white" alt="Email">
+  </a>
+  <a href="https://t.me/zhksig5">
+    <img src="https://img.shields.io/badge/Telegram-@zhksig5-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+  </a>
+</p>
 ---
 
 ## 🛠 Технические компетенции
