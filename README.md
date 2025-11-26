@@ -18,11 +18,12 @@
 
 ## 🛠 Технические компетенции
 
-### 🔍 Анализ и проектирование
-![BPMN](https://img.shields.io/badge/📋_BPMN-000000?style=flat-square)
-![Use Case](https://img.shields.io/badge/📊_Use_Case-000000?style=flat-square)
-![User Stories](https://img.shields.io/badge/📝_User_Stories-000000?style=flat-square)
-![Прототипирование](https://img.shields.io/badge/🎨_Прототипирование-000000?style=flat-square)
+### 📊 Проектирование и моделирование
+**Бизнес-процессы**: BPMN, Process Diagram, IDEF0, IDEF3  
+**UML**: Use Case, Activity, Sequence, State Machine Diagram  
+**Данные**: ERD, ER-модель, DFD  
+**Интерфейсы**: Wireframes, Mockups, User Journey  
+**Требования**: User Stories, FRS/SRS документация
 
 ### 💻 Инструменты
 <span style="display: inline-block; white-space: nowrap;">
