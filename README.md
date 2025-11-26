@@ -25,15 +25,11 @@
 ![Прототипирование](https://img.shields.io/badge/🎨_Прототипирование-000000?style=flat-square)
 
 ### 💻 Инструменты
-<div align="center">
-
-<img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white&labelColor=gray" alt="PostgreSQL" />
-<img src="https://img.shields.io/badge/-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=gray" alt="Swagger" />
-<img src="https://img.shields.io/badge/-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&labelColor=gray" alt="Postman" />
-<img src="https://img.shields.io/badge/-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&labelColor=gray" alt="Figma" />
-<img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white&labelColor=gray" alt="Git" />
-
-</div>
+<img src="https://img.shields.io/badge/-PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white&logoSize=auto" alt="PostgreSQL" />
+<img src="https://img.shields.io/badge/-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&logoSize=auto" alt="Swagger" />
+<img src="https://img.shields.io/badge/-Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white&logoSize=auto" alt="Postman" />
+<img src="https://img.shields.io/badge/-Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white&logoSize=auto" alt="Figma" />
+<img src="https://img.shields.io/badge/-Git-F05032?style=for-the-badge&logo=git&logoColor=white&logoSize=auto" alt="Git" />
 
 ### ⚙️ Методологии
 - **Agile** (Scrum, Kanban)
