@@ -30,9 +30,15 @@
 ![Git](https://img.shields.io/badge/🌿_Git-F05032?style=flat-square&logo=git&logoColor=white)
 
 ### ⚙️ Методологии
-![Agile](https://img.shields.io/badge/🔄_Agile-0096D6?style=flat-square)
-![Scrum](https://img.shields.io/badge/📅_Scrum-6DB33F?style=flat-square)
-![Жизненный цикл](https://img.shields.io/badge/🔄_Жизненный_цикл_PO-000000?style=flat-square)
+<div align="center">
+
+![Agile](https://img.shields.io/badge/Agile-0096E0?style=for-the-badge&logo=circle&logoColor=white)
+![Scrum](https://img.shields.io/badge/Scrum-6DB33F?style=for-the-badge&logo=scrum&logoColor=white)
+![Kanban](https://img.shields.io/badge/Kanban-0080FF?style=for-the-badge&logo=kanban&logoColor=white)
+![Waterfall](https://img.shields.io/badge/Waterfall-0052CC?style=for-the-badge&logo=water&logoColor=white)
+![XP](https://img.shields.io/badge/XP-eXtreme_Programming-FF6B6B?style=for-the-badge)
+
+</div>
 
 ---
 
