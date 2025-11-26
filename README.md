@@ -23,17 +23,15 @@
 
 <span style="display: inline-block; white-space: nowrap;">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" height="60" title="PostgreSQL" style="display: inline; margin-right: 15px;" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dbeaver/dbeaver-original.svg" width="60" height="60" title="DBeaver" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg" width="60" height="60" title="Swagger" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="60" height="60" title="Postman" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" title="Figma" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" height="60" title="Git" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="60" height="60" title="Visual Studio Code" style="display: inline; margin-right: 15px;" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drawio/drawio-original.svg" width="60" height="60" title="draw.io" style="display: inline;" />
 </span>
 
-<span style="display: inline-block; white-space: nowrap; margin-top: 10px;">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dbeaver/dbeaver-original.svg" width="60" height="60" title="DBeaver" style="display: inline; margin-right: 15px;" />
-  <img src="https://img.shields.io/badge/draw.io-F08705?style=for-the-badge&logo=diagrams.net&logoColor=white" width="60" height="60" title="draw.io" style="display: inline;" />
-</span>
 
 ### 📊 Проектирование и моделирование
 - **Бизнес-процессы**: BPMN, Process Diagram, IDEF0, IDEF3  
