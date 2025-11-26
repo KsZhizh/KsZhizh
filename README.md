@@ -18,13 +18,6 @@
 
 ## 🛠 Технические компетенции
 
-### 📊 Проектирование и моделирование
-**Бизнес-процессы**: BPMN, Process Diagram, IDEF0, IDEF3  
-**UML**: Use Case, Activity, Sequence, State Machine Diagram  
-**Данные**: ERD, ER-модель, DFD  
-**Интерфейсы**: Wireframes, Mockups, User Journey  
-**Требования**: User Stories, FRS/SRS документация
-
 ### 💻 Инструменты
 <span style="display: inline-block; white-space: nowrap;">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" height="60" title="PostgreSQL" style="display: inline; margin-right: 15px;" />
@@ -33,6 +26,13 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" title="Figma" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" height="60" title="Git" style="display: inline;" />
 </span>
+
+### 📊 Проектирование и моделирование
+- **Бизнес-процессы**: BPMN, Process Diagram, IDEF0, IDEF3  
+- **UML**: Use Case, Activity, Sequence, State Machine Diagram  
+- **Данные**: ERD, ER-модель, DFD  
+- **Интерфейсы**: Wireframes, Mockups, User Journey  
+- **Требования**: User Stories, FRS/SRS документация
 
 ### ⚙️ Методологии
 - **Agile** (Scrum, Kanban)
