@@ -1,0 +1,769 @@
+openapi: 3.0.1
+info:
+  title: API кинотеатра «Искорка»
+  description: |
+    __API кинотеатра__ "_Искорка_"
+  version: 1.0.0
+servers:
+  - url: https://api.iskorka.ru
+paths:
+  /sessions:
+    get:
+      tags: 
+        - Сеансы
+      description: Метод для получения информации о сеансе и доступных местах
+      summary: Получить информацию о сеансе и доступных местах
+      parameters:
+        - name: data
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Дата сеанса
+        - name: film_id
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: ID фильма
+        - name: start_time
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: Время начала сеанса
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Номер страницы, начинается с 1
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 80
+            default: 20
+          description: Количество элементов на странице
+      responses:
+        200:
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Session'
+        404:
+          description: Сеанс не найден
+        500:
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка на сервере"
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка на сервере"
+                xml:
+                  name: "error" 
+  /booking:
+    post:
+      tags:
+        - Бронирование
+      description: Метод для бронирования билетов
+      summary: Забронировать билет
+      parameters:
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Номер страницы, начинается с 1
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 80
+            default: 20
+          description: Количество элементов на странице
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: 
+              type: object
+              properties:
+                film_id:
+                  type: integer
+                  example: 15
+                  title: ID фильма
+                session_id:
+                  type: integer
+                  example: 123
+                  title: ID сеанса
+                seat_id:
+                  type: integer
+                  example: 225
+                  title: ID места
+                customer_id:
+                  type: integer
+                  example: 1289
+                  title: ID покупателя
+                card_id:
+                  type: integer
+                  example: 328
+                  title: ID бонусной карты
+                bonus_points_used:
+                  type: string
+                  format: Decimal
+                  example: 175
+                  title: количество используемых бонусов
+          application/xml:
+            schema:
+              type: object
+              properties:
+                film_id:
+                  type: integer
+                  example: 15
+                session_id:
+                  type: integer
+                  example: 123
+                seat_id:
+                  type: integer
+                  example: 225
+                customer_id:
+                  type: integer
+                  example: 1289
+                  title: ID покупателя
+                card_id:
+                  type: integer
+                  example: 328
+                  title: ID бонусной карты
+                bonus_points_used:
+                  type: string
+                  format: Decimal
+                  example: 175
+                  title: количество используемых бонусов
+      responses:
+        201:
+          description: Бронь создана
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Order'
+        400:
+          description: Неверные данные
+        409:
+          description: Место уже занято
+        500:
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при создании брони"
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при создании брони"
+                xml:
+                  name: "error" 
+  /booking/{booking_id}/status:
+    patch:
+      tags:
+        - Бронирование
+      description: Метод для изменения статуса брони
+      summary: Изменить статус брони
+      parameters:
+        - name: booking_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID брони
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Номер страницы, начинается с 1
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 80
+            default: 20
+          description: Количество элементов на странице
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "cancelled"
+                  title: Статус брони
+          application/xml:
+            schema:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "cancelled"
+                  title: Статус брони
+              xml:
+                name: "statusUpdate"
+      responses:
+        200:
+          description: Статус изменен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Order'
+        404:
+          description: Бронь не найдена
+        500:
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при изменении статуса брони"
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при изменении статуса брони"
+                xml:
+                  name: "error" 
+  /session/{session_id}/start_time:
+    patch:
+      tags:
+        - Сеансы
+      description: Метод для изменения времени сеанса (только для администратора)
+      summary: Изменить время сеанса
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID сеанса
+        - name: page
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            default: 1
+          description: Номер страницы, начинается с 1
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 80
+            default: 20
+          description: Количество элементов на странице
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                start_time:
+                  type: string
+                  format: time
+                  example: "18:00"
+                  title: Новое время начала сеанса
+          application/xml:
+            schema:
+              type: object
+              properties:
+                start_time:
+                  type: string
+                  format: time
+                  example: "18:00"
+                  title: Новое время начала сеанса
+              xml:
+                name: "sessionTimeUpdate"
+      responses:
+        200:
+          description: Время изменено
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Session'
+        403:
+          description: Доступ запрещен
+        404:
+          description: Сеанс не найден
+        500:
+          description: Внутренняя ошибка сервера
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при изменении времени сеанса"
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Internal Server Error"
+                  message:
+                    type: string
+                    example: "Произошла непредвиденная ошибка при изменении времени сеанса" 
+                xml:
+                  name: "error" 
+  /customers:
+    post:
+      tags:
+        - Покупатели
+      description: Создание нового покупателя
+      summary: Создать покупателя
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateCustomerRequest'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/CreateCustomerRequest'
+      responses:
+        201:
+          description: Покупатель создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Customer'
+        400:
+          description: Неверные данные
+        500:
+          description: Внутренняя ошибка сервера
+  /customers/{customer_id}:
+    get:
+      tags:
+        - Покупатели
+      description: Получение подробной информации о конкретном покупателе, включая данные его бонусной карты
+      summary: Получить информацию о покупателе
+      parameters:
+        - name: customer_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID покупателя
+      responses:
+        200:
+          description: Успешный запрос
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomerDetailed'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/CustomerDetailed'
+        404:
+          description: Покупатель не найден
+        500:
+          description: Внутренняя ошибка сервера
+  /reports/bonus-usage-monthly:
+    get:
+      tags:
+        - Отчеты
+      description: Формирование ежемесячного отчета по использованию бонусных карт клиентами
+      summary: Получить отчет по использованию бонусов
+      parameters:
+        - name: year
+          in: query
+          required: true
+          schema:
+            type: integer
+            example: 2024
+        - name: month
+          in: query
+          required: true
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 12
+            example: 6
+      responses:
+        200:
+          description: Отчет успешно сформирован
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BonusUsageReport'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/BonusUsageReport'
+        400:
+          description: Неверные параметры запроса
+        500:
+          description: Внутренняя ошибка сервера
+components:
+  schemas:
+    Session:
+        type: object
+        properties:
+          pagination:
+            type: object
+            properties:
+              limit:
+                type: integer
+                example: 20
+              offsed:
+                type: integer
+                example: 1
+              totalCount:
+                type: integer
+                example: 80       
+          session:
+              type: array
+              items:
+                type: object
+                properties:
+                  session_id:
+                    type: integer
+                    example: 123
+                    title: Уникальный идентификатор сеанса
+                  film_name:
+                    type: string
+                    title: Название фильма
+                  hall_name:
+                    type: string
+                    title: Название зала
+                  date:
+                    type: string
+                    format: date
+                    title: Дата сеанса
+                  start_time:
+                    type: string
+                    format: time
+                    title: Время начала сеанса
+                  total_available_seats: 
+                    type: integer
+                    example: 320
+                    title: Общее количество свободных мест
+                  available_seats:
+                    type: array
+                    title: Доступные места
+                    items:
+                      type: object
+                      properties:
+                        seat_id:
+                          type: integer
+                          example: 225
+                          title: Уникальный идентификатор места
+                        row_number:
+                          type: integer
+                          example: 6
+                          title: Номер ряда
+                        seat_number:
+                          type: integer
+                          example: 12
+                          title: Номер места
+                        seat_type:
+                          type: string
+                          title: Тип места 
+                          example: standard
+                        price:
+                          type: string
+                          example: 350
+                          title: Цена
+    Order:
+      type: object
+      properties:
+          pagination:
+            type: object
+            properties:
+              limit:
+                type: integer
+                example: 20
+              offsed:
+                type: integer
+                example: 1
+              totalCount:
+                type: integer
+                example: 80 
+          booking:
+            type: array
+            items:
+              type: object
+              properties:
+                booking_id:
+                  type: integer
+                  example: 456
+                  title: Уникальный идентификатор брони
+                session_id:
+                  type: integer
+                  example: 123
+                  title: ID сеанса
+                seat_id:
+                  type: integer
+                  example: 225
+                  title: ID места
+                customer_id:
+                  type: integer
+                  example: 1289
+                  title: ID покупателя
+                card_id:
+                  type: integer
+                  example: 328
+                  title: ID бонусной карты
+                bonus_points_used:
+                  type: string
+                  format: Decimal
+                  example: 175
+                  title: количество используемых бонусов
+                bonus_points_earned:
+                  type: string
+                  format: Decimal
+                  example: 280
+                  title: доступное количество бонусов
+                booking_time:
+                  type: string
+                  format: date-time
+                  example: "2024-01-15T10:30:00Z"
+                  title: Время бронирования
+                status:
+                  type: string
+                  example: "active"
+                  title: Статус брони
+                booking_code:
+                  type: string
+                  example: "ABC123"
+                  title: Уникальный код брони
+                cost:
+                  type: string
+                  example: 350
+                  title: Итоговая цена
+                total_cost:
+                  type: string
+                  example: 175
+                  title: Итоговая цена с учетом применения бонусов
+    CreateCustomerRequest:
+      type: object
+      required:
+        - name
+        - phone
+        - email
+      properties:
+        name:
+          type: string
+          example: "Иван Иванов"
+          title: Имя покупателя
+        phone:
+          type: string
+          example: "+79161234567"
+          title: Телефон
+        email:
+          type: string
+          example: "ivan@mail.ru"
+          title: Email
+        bonus_card_id:
+          type: integer
+          example: 456
+          title: ID бонусной карты
+    Customer:
+      type: object
+      properties:
+        customer_id:
+          type: integer
+          example: 789
+          title: ID покупателя
+        name:
+          type: string
+          example: "Иван Иванов"
+          title: Имя покупателя
+        phone:
+          type: string
+          example: "+79161234567"
+          title: Телефон
+        email:
+          type: string
+          example: "ivan@mail.ru"
+          title: Email
+        bonus_card_id:
+          type: integer
+          example: 456
+          title: ID бонусной карты
+    CustomerDetailed:
+      type: object
+      properties:
+        customer_id:
+          type: integer
+          example: 789
+        name:
+          type: string
+          example: "Иван Иванов"
+        phone:
+          type: string
+          example: "+79161234567"
+        email:
+          type: string
+          example: "ivan@mail.ru"
+        bonus_card_id:
+          type: integer
+          example: 456
+        card_number:
+          type: string
+          example: 328
+        issue_date:
+          type: string
+          format: date-time
+          example: "2024-01-01T00:00:00Z"
+        is_active:
+          type: boolean
+          example: true
+        balance:
+          type: number
+          format: float
+          example: 280
+
+    BonusUsageReport:
+      type: object
+      properties:
+        period:
+          type: string
+          example: "2024-06"
+        generated_at:
+          type: string
+          format: date-time
+        summary:
+          type: object
+          properties:
+            total_customers_in_report:
+              type: integer
+              example: 45
+            average_bonus_usage:
+              type: number
+              format: float
+              example: 65.5
+            average_bonus_payment:
+              type: number
+              format: float
+              example: 22.3
+        customers:
+          type: array
+          items:
+            $ref: '#/components/schemas/BonusUsageReportItem'
+    BonusUsageReportItem:
+      type: object
+      properties:
+        customer_id:
+          type: integer
+          example: 789
+        customer_name:
+          type: string
+          example: "Иван Иванов"
+        total_bookings:
+          type: integer
+          example: 5
+        bookings_with_bonus:
+          type: integer
+          example: 3
+        bonus_usage_percentage:
+          type: number
+          format: float
+          example: 60.0
+        total_ticket_cost:
+          type: number
+          format: float
+          example: 5000.00
+        total_bonus_used:
+          type: number
+          format: float
+          example: 750.00
+        bonus_payment_percentage:
+          type: number
+          format: float
+          example: 15.0
+        bonus_card_balance:
+          type: number
+          format: float
+          example: 1250.00
+         
+      
+          
+         
+      
+          
+          
