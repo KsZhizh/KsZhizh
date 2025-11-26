@@ -29,7 +29,7 @@
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" title="Figma" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" height="60" title="Git" style="display: inline; margin-right: 15px;" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="60" height="60" title="Visual Studio Code" style="display: inline; margin-right: 15px;" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/drawio/drawio-original.svg" width="60" height="60" title="draw.io" style="display: inline;" />
+  <img src="./images/drawio-icon.png" width="60" height="60" title="draw.io" style="display: inline; border-radius: 50%; object-fit: cover;" />
 </span>
 
 
