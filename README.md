@@ -25,11 +25,11 @@
 ![Прототипирование](https://img.shields.io/badge/🎨_Прототипирование-000000?style=flat-square)
 
 ### 💻 Инструменты
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" height="60" title="PostgreSQL" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg" width="60" height="60" title="Swagger" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="60" height="60" title="Postman" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" title="Figma" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" height="60" title="Git" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" height="60" title="PostgreSQL" style="display: inline-block; margin-right: 15px;" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg" width="60" height="60" title="Swagger" style="display: inline-block; margin-right: 15px;" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" width="60" height="60" title="Postman" style="display: inline-block; margin-right: 15px;" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="60" height="60" title="Figma" style="display: inline-block; margin-right: 15px;" />
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" height="60" title="Git" style="display: inline-block;" />
 
 ### ⚙️ Методологии
 - **Agile** (Scrum, Kanban)
